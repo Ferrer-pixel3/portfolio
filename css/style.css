@@ -6,3 +6,29 @@ section { padding: 20px; }
 .card { border: 1px solid #ccc; padding: 15px; margin: 10px; display: inline-block; width: 250px; }
 .card img { width: 100%; height: auto; }
 footer { background: #2c3e50; color: white; text-align: center; padding: 10px; }
+#sobre-mi {
+  text-align: center;
+  padding: 40px;
+  background: #f4f4f4;
+}
+
+#sobre-mi h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+#sobre-mi p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #2c3e50;
+}
