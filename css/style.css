@@ -32,3 +32,30 @@ footer { background: #2c3e50; color: white; text-align: center; padding: 10px; }
   margin-bottom: 20px;
   border: 3px solid #2c3e50;
 }
+
+#proyectos {
+  text-align: center;
+  padding: 40px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.info {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
