@@ -4,12 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio de Ferrer</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
-    section { padding: 20px; }
-    footer { background: #2c3e50; color: white; text-align: center; padding: 10px; }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -17,22 +12,33 @@
     <p>Desarrollador de Software Multiplataforma</p>
   </header>
 
-  <section>
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobre-mi">
     <h2>Sobre mí</h2>
     <p>Estudiante en la Universidad Tecnológica de Puebla, apasionado por el desarrollo web, móvil y bases de datos.</p>
   </section>
 
-  <section>
+  <section id="proyectos">
     <h2>Proyectos</h2>
-    <ul>
-      <li>Página de muebles en C# y HTML/CSS</li>
-      <li>Aplicación móvil QuimicAAP en Expo</li>
-      <li>Plataforma SKILLSHARE en Django/PostgreSQL</li>
-    </ul>
+    <div class="card">
+      <img src="img/muebles.png" alt="Página de muebles">
+      <h3>Página de muebles</h3>
+      <p>Desarrollada en C# y HTML/CSS.</p>
+    </div>
+    <div class="card">
+      <img src="img/quimicapp.png" alt="QuimicAAP">
+      <h3>QuimicAAP</h3>
+      <p>Aplicación móvil en Expo.</p>
+    </div>
   </section>
 
-  <footer>
-    <p>Contacto: ferrer@example.com | GitHub: github.com/ferrer</p>
+  <footer id="contacto">
+    <p>Contacto: ferrer@example.com | GitHub: github.com/Ferrer-pixel3</p>
   </footer>
 </body>
 </html>
