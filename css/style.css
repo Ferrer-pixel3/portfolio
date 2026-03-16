@@ -43,3 +43,39 @@ header {
   font-size: 18px;
   color: #333;
 }
+#contacto {
+  background: #2c3e50;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+#contacto h2 {
+  margin-bottom: 20px;
+}
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.contacto a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s;
+}
+
+.contacto a:hover {
+  transform: scale(1.1);
+}
+
+.icono {
+  width: 30px;
+  height: 30px;
+}
