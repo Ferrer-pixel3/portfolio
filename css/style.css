@@ -119,3 +119,43 @@ header {
   margin-bottom: 30px;
   color: #2c3e50;
 }
+
+#constancias {
+  text-align: center;
+  padding: 40px;
+}
+
+#constancias h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+#constancias .galeria {
+  display: flex;
+  justify-content: center;
+}
+
+#constancias .item {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#constancias .item a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #2c3e50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+#constancias .item a:hover {
+  background: #1abc9c;
+}
