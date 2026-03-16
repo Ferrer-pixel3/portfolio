@@ -73,3 +73,49 @@ footer { background: #2c3e50; color: white; text-align: center; padding: 10px; }
   border-radius: 8px;
   border: 2px solid #ccc;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+
+.proyecto {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.proyecto:hover {
+  transform: scale(1.05);
+}
+
+.proyecto img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.proyecto h2 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
