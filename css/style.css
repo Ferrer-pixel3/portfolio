@@ -59,3 +59,17 @@ footer { background: #2c3e50; color: white; text-align: center; padding: 10px; }
   margin-right: auto;
   text-align: left;
 }
+
+.galeria {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.galeria img {
+  width: 250px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
