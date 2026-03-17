@@ -27,24 +27,47 @@
   <!-- Galería con descripciones -->
   <div class="galeria">
     <div class="item">
-      <img src="img/Menu Principal Muebles.png" alt="Página principal del catálogo">
+      <img src="img/Menu Principal Muebles.png" alt="Menú principal" onclick="openModal(this)">
       <p><strong>Menú principal:</strong> Vista inicial del catálogo con acceso a las diferentes categorías de muebles.</p>
     </div>
 
     <div class="item">
-      <img src="img/Productos muebles.png" alt="Detalle de producto">
+      <img src="img/Productos muebles.png" alt="Detalle de producto" onclick="openModal(this)">
       <p><strong>Detalle de producto:</strong> Pantalla que muestra las características, imagen y precio de cada mueble.</p>
     </div>
 
     <div class="item">
-      <img src="img/Carrito de Compras.png" alt="Carrito de Compras">
+      <img src="img/Carrito de Compras.png" alt="Carrito de Compras" onclick="openModal(this)">
       <p><strong>Carrito de compras:</strong> Funcionalidad para agregar productos seleccionados y visualizar el total antes de la compra.</p>
     </div>
+  </div>
+
+  <!-- Modal oculto -->
+  <div id="modal" class="modal">
+    <span class="cerrar" onclick="closeModal()">&times;</span>
+    <img class="modal-contenido" id="imagenModal">
+    <div id="descripcionModal"></div>
   </div>
 
   <!-- Enlace al repositorio -->
   <p>
     <a href="https://github.com/Ferrer-pixel3/Pagina-Muebles.git" target="_blank">Ver código en GitHub</a>
   </p>
+
+  <script>
+    function openModal(img) {
+      var modal = document.getElementById("modal");
+      var modalImg = document.getElementById("imagenModal");
+      var descripcion = document.getElementById("descripcionModal");
+
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      descripcion.innerHTML = img.nextElementSibling.innerHTML;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
