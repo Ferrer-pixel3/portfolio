@@ -14,43 +14,75 @@
   <img src="img/Logo QuimicAPP.jpeg" alt="Logo QuimicAAP" class="logo">
 
   <!-- Descripción general -->
-  <p>
-    Proyecto académico realizado en equipo, con una versión individual.  
-    Se trata de una aplicación móvil desarrollada en <strong>Expo (React Native)</strong> para apoyar a estudiantes de secundaria en el aprendizaje de química.
-  </p>
+  <section class="descripcion">
+    <p>
+      Proyecto académico realizado en equipo, con una versión individual.  
+      Se trata de una aplicación móvil desarrollada en <strong>Expo (React Native)</strong> para apoyar a estudiantes de secundaria en el aprendizaje de química.
+    </p>
 
-  <p>
-    La aplicación se organizó en secciones: Historia, Cuestionario, Juegos y un Administrador conectado a <strong>Firebase</strong>.  
-    En mi caso, trabajé en la sección de <strong>Juegos</strong>, que incluía registro de usuarios, inicio de sesión, un menú personalizado y actividades como  
-    memorama, preguntas y adivinanzas.
-  </p>
+    <p>
+      La aplicación se organizó en secciones: Historia, Cuestionario, Juegos y un Administrador conectado a <strong>Firebase</strong>.  
+      En mi caso, trabajé en la sección de <strong>Juegos</strong>, que incluía registro de usuarios, inicio de sesión, un menú personalizado y actividades como  
+      memorama, preguntas y adivinanzas.
+    </p>
+  </section>
 
   <!-- Galería con descripciones -->
-  <div class="galeria">
+  <section class="galeria">
     <div class="item">
-      <img src="img/Muestra 4 QuimicAPP.png" alt="Login de QuimicAPP">
+      <img src="img/Muestra 4 QuimicAPP.png" alt="Login de QuimicAPP" onclick="openModal(this)">
       <p><strong>Login:</strong> Pantalla de inicio de sesión con validación de usuarios registrados en Firebase.</p>
     </div>
 
     <div class="item">
-      <img src="img/Muestra 3 QuimicAPP.png" alt="Menú QuimicAAP">
+      <img src="img/Muestra 3 QuimicAPP.png" alt="Menú QuimicAAP" onclick="openModal(this)">
       <p><strong>Menú principal:</strong> Vista personalizada con acceso a las secciones de Historia, Cuestionario y Juegos.</p>
     </div>
 
     <div class="item">
-      <img src="img/Muestra 1 QuimicAPP.png" alt="Adivinanza">
+      <img src="img/Muestra 1 QuimicAPP.png" alt="Adivinanza" onclick="openModal(this)">
       <p><strong>Adivinanza:</strong> Actividad interactiva para reforzar conceptos de química mediante preguntas dinámicas.</p>
     </div>
 
     <div class="item">
-      <img src="img/Muestra 2 QuimicAPP.png" alt="Creación de Juegos en QuimicAAP">
+      <img src="img/Muestra 2 QuimicAPP.png" alt="Creación de Juegos en QuimicAAP" onclick="openModal(this)">
       <p><strong>Creación de juegos:</strong> Ejemplo de cómo se configuraban actividades como memorama y cuestionarios dentro de la app.</p>
     </div>
+  </section>
+
+  <!-- Modal único -->
+  <div id="modal" class="modal">
+    <span class="cerrar" onclick="closeModal()">&times;</span>
+    <img class="modal-contenido" id="imagenModal">
+    <div id="descripcionModal"></div>
   </div>
 
   <!-- Enlace al repositorio o demo -->
-  <p>
-    <a href="https://snack.expo.dev/@christianferrer/app-quimicaapp" target="_blank">Probar en Expo Snack</a>
-  </p>
+  <section class="enlaces">
+    <h2>Enlaces</h2>
+    <ul>
+      <li><a href="https://snack.expo.dev/@christianferrer/app-quimicaapp" target="_blank">Probar en Expo Snack</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Ferrer - Portafolio</p>
+  </footer>
+
+  <script>
+    function openModal(img) {
+      var modal = document.getElementById("modal");
+      var modalImg = document.getElementById("imagenModal");
+      var descripcion = document.getElementById("descripcionModal");
+
+      modal.style.display = "flex"; // usa flex para centrar
+      modalImg.src = img.src;
+      descripcion.innerHTML = img.nextElementSibling.innerHTML;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
