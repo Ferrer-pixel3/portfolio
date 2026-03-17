@@ -14,38 +14,70 @@
   <img src="img/Logo Version 1.jpg" alt="Logo Skillshare" class="logo">
 
   <!-- Descripción general -->
-  <p>
-    Esta fue la primera versión de nuestra aplicación <strong>Skillshare</strong>, desarrollada en C# con conexión a MySQL Workbench.  
-    Aunque algunos módulos no quedaron completamente conectados, muestra el avance inicial de la idea:  
-    una plataforma para crear y solicitar servicios dentro de nuestra carrera de TI - Desarrollo de Software Multiplataforma.
-  </p>
+  <section class="descripcion">
+    <p>
+      Esta fue la primera versión de nuestra aplicación <strong>Skillshare</strong>, desarrollada en C# con conexión a MySQL Workbench.  
+      Aunque algunos módulos no quedaron completamente conectados, muestra el avance inicial de la idea:  
+      una plataforma para crear y solicitar servicios dentro de nuestra carrera de TI - Desarrollo de Software Multiplataforma.
+    </p>
 
-  <p>
-    La aplicación permitía registrar servicios, mostrar su descripción, solicitar el servicio deseado y definir su costo.  
-    Toda esta información se almacenaba en una base de datos MySQL.
-  </p>
+    <p>
+      La aplicación permitía registrar servicios, mostrar su descripción, solicitar el servicio deseado y definir su costo.  
+      Toda esta información se almacenaba en una base de datos MySQL.
+    </p>
+  </section>
 
   <!-- Galería con descripciones -->
-  <div class="galeria">
+  <section class="galeria">
     <div class="item">
-      <img src="img/Diagrama.jpeg" alt="Diagrama de la aplicación Skillshare">
+      <img src="img/Diagrama.jpeg" alt="Diagrama de la aplicación Skillshare" onclick="openModal(this)">
       <p><strong>Diagrama:</strong> Representa la estructura inicial de la aplicación y cómo se conectaban los módulos con la base de datos.</p>
     </div>
 
     <div class="item">
-      <img src="img/Muestra1.jpeg" alt="Muestra de la aplicación Skillshare en C#">
+      <img src="img/Muestra1.jpeg" alt="Muestra de la aplicación Skillshare en C#" onclick="openModal(this)">
       <p><strong>Muestra 1:</strong> Pantalla de registro de servicios, donde se ingresaban nombre, descripción y costo.</p>
     </div>
 
     <div class="item">
-      <img src="img/Muestra 2.jpeg" alt="Otra muestra de la aplicación Skillshare en C#">
+      <img src="img/Muestra 2.jpeg" alt="Otra muestra de la aplicación Skillshare en C#" onclick="openModal(this)">
       <p><strong>Muestra 2:</strong> Vista de consulta de servicios disponibles, mostrando la información almacenada en MySQL.</p>
     </div>
+  </section>
+
+  <!-- Modal único -->
+  <div id="modal" class="modal">
+    <span class="cerrar" onclick="closeModal()">&times;</span>
+    <img class="modal-contenido" id="imagenModal">
+    <div id="descripcionModal"></div>
   </div>
 
   <!-- Enlace al repositorio -->
-  <p>
-    <a href="https://github.com/Ferrer-pixel3/Proyecto-Skillshare.git" target="_blank">Ver código en GitHub</a>
-  </p>
+  <section class="enlaces">
+    <h2>Enlaces</h2>
+    <ul>
+      <li><a href="https://github.com/Ferrer-pixel3/Proyecto-Skillshare.git" target="_blank">Ver código en GitHub</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Ferrer - Portafolio</p>
+  </footer>
+
+  <script>
+    function openModal(img) {
+      var modal = document.getElementById("modal");
+      var modalImg = document.getElementById("imagenModal");
+      var descripcion = document.getElementById("descripcionModal");
+
+      modal.style.display = "flex"; // usa flex para centrar
+      modalImg.src = img.src;
+      descripcion.innerHTML = img.nextElementSibling.innerHTML;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
