@@ -19,6 +19,7 @@ header {
   max-width: 250px;
 }
 
+/* Galería de proyectos tipo tarjetas */
 .galeria {
   display: flex;
   flex-wrap: wrap;
@@ -45,58 +46,7 @@ header {
   font-size: 14px;
 }
 
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.item {
-  background: white;
-  border-radius: 8px;
-  padding: 15px;
-  width: 250px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.item img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-.item p {
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.item {
-  background: white;
-  border-radius: 8px;
-  padding: 15px;
-  width: 250px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.item img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-.item p {
-  margin-top: 10px;
-  font-size: 14px;
-}
-
+/* Galería de imágenes con descripción */
 .descripcion {
   max-width: 800px;
   margin: 0 auto 40px auto;
@@ -112,7 +62,7 @@ header {
   color: #2c3e50;
 }
 
-.galeria {
+.galeria-imagenes {
   display: flex;
   flex-direction: column;
   gap: 30px;

@@ -35,32 +35,46 @@
   </p>
 </section>
 
-   <section class="galeria">
-  <h2>Galería</h2>
+ <section class="galeria">
+      <h2>Galería</h2>
 
-  <div class="imagen-item">
-    <img src="img/Inicio Skillshare-v2.png" alt="Pantalla de inicio">
-    <p><strong>Pantalla de inicio:</strong> Aquí el usuario escoge si entra como <em>Usuario</em> o <em>Trabajador</em>.</p>
-  </div>
+      <div class="imagen-item">
+        <img src="img/Inicio Skillshare-v2.png" alt="Pantalla de inicio" onclick="openModal(this)">
+        <p><strong>Pantalla de inicio:</strong> Aquí el usuario escoge si entra como Usuario o Trabajador.</p>
+      </div>
 
-  <div class="imagen-item">
-    <img src="img/Login skillshare-v2.png" alt="Login">
-    <p><strong>Login:</strong> Tanto usuarios como trabajadores comparten el mismo diseño de inicio de sesión.</p>
-  </div>
+      <div class="imagen-item">
+        <img src="img/Login skillshare-v2.png" alt="Login" onclick="openModal(this)">
+        <p><strong>Login:</strong> Tanto usuarios como trabajadores comparten el mismo diseño de inicio de sesión.</p>
+      </div>
 
-  <div class="imagen-item">
-    <img src="img/Menu usuario skillshare-v2.png" alt="Menú Usuario">
-    <p><strong>Menú Usuario:</strong> Muestra las categorías y servicios disponibles creados por los trabajadores. 
-    El usuario puede solicitarlos, añadir reseñas o comentarios.</p>
-  </div>
+      <div class="imagen-item">
+        <img src="img/Menu usuario skillshare-v2.png" alt="Menú Usuario" onclick="openModal(this)">
+        <p><strong>Menú Usuario:</strong> Muestra las categorías y servicios disponibles creados por los trabajadores.</p>
+      </div>
 
-  <div class="imagen-item">
-    <img src="img/Menu Trabajador skillshare-v2.png" alt="Menú Trabajador">
-    <p><strong>Menú Trabajador:</strong> Permite crear nuevos servicios. Los servicios creados se muestran en la sección de usuarios.</p>
-  </div>
-</section>
+      <div class="imagen-item">
+        <img src="img/Menu Trabajador skillshare-v2.png" alt="Menú Trabajador" onclick="openModal(this)">
+        <p><strong>Menú Trabajador:</strong> Permite crear nuevos servicios que luego aparecen en la vista de Usuario.</p>
+      </div>
+    </section>
 
-    <section class="enlaces">
+    <!-- Modal oculto -->
+    <div id="modal" class="modal">
+      <span class="cerrar" onclick="closeModal()">&times;</span>
+      <img class="modal-contenido" id="imagenModal">
+      <div id="descripcionModal"></div>
+    </div>
+  </main>
+
+   <div id="modal" class="modal">
+      <span class="cerrar" onclick="closeModal()">&times;</span>
+      <img class="modal-contenido" id="imagenModal">
+      <div id="descripcionModal"></div>
+    </div>
+  </main>
+
+     <section class="enlaces">
       <h2>Enlaces</h2>
       <ul>
         <li><a href="https://github.com/Ferrer-pixel3/skillshare-v2" target="_blank">Repositorio GitHub</a></li>
@@ -72,5 +86,23 @@
   <footer>
     <p>&copy; 2026 Ferrer - Portafolio</p>
   </footer>
+
+  <script>
+    function openModal(img) {
+      var modal = document.getElementById("modal");
+      var modalImg = document.getElementById("imagenModal");
+      var descripcion = document.getElementById("descripcionModal");
+
+      modal.style.display = "block";
+      modalImg.src = img.src;
+
+      // Usa el alt para mostrar descripción
+      descripcion.innerHTML = img.nextElementSibling.innerHTML;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
