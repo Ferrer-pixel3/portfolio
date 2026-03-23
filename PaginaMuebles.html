@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página de Muebles - Proyecto</title>
   <link rel="stylesheet" href="css/style-proyecto.css">
 </head>
@@ -14,18 +15,20 @@
   <img src="img/Log De Muebles.png" alt="Logo Página de Muebles" class="logo">
 
   <!-- Descripción general -->
-  <p>
-    Proyecto académico desarrollado en <strong>Python</strong> utilizando un framework web (Django/Flask) para mostrar un catálogo de muebles.  
-    El objetivo fue crear una interfaz sencilla y funcional que permitiera visualizar productos, sus características y precios.
-  </p>
+  <section class="descripcion">
+    <p>
+      Proyecto académico desarrollado en <strong>Python</strong> utilizando un framework web (Django/Flask) para mostrar un catálogo de muebles.  
+      El objetivo fue crear una interfaz sencilla y funcional que permitiera visualizar productos, sus características y precios.
+    </p>
 
-  <p>
-    La aplicación incluye un diseño modular con secciones para distintos tipos de muebles, integración de imágenes representativas y enlaces a detalles de cada producto.  
-    Se trabajó en la presentación visual y en la organización clara de la información para mejorar la experiencia del usuario.
-  </p>
+    <p>
+      La aplicación incluye un diseño modular con secciones para distintos tipos de muebles, integración de imágenes representativas y enlaces a detalles de cada producto.  
+      Se trabajó en la presentación visual y en la organización clara de la información para mejorar la experiencia del usuario.
+    </p>
+  </section>
 
   <!-- Galería con descripciones -->
-  <div class="galeria">
+  <section class="galeria">
     <div class="item">
       <img src="img/Menu Principal Muebles.png" alt="Menú principal" onclick="openModal(this)">
       <p><strong>Menú principal:</strong> Vista inicial del catálogo con acceso a las diferentes categorías de muebles.</p>
@@ -40,7 +43,7 @@
       <img src="img/Carrito de Compras.png" alt="Carrito de Compras" onclick="openModal(this)">
       <p><strong>Carrito de compras:</strong> Funcionalidad para agregar productos seleccionados y visualizar el total antes de la compra.</p>
     </div>
-  </div>
+  </section>
 
   <!-- Modal oculto -->
   <div id="modal" class="modal">
@@ -50,9 +53,16 @@
   </div>
 
   <!-- Enlace al repositorio -->
-  <p>
-    <a href="https://github.com/Ferrer-pixel3/Pagina-Muebles.git" target="_blank">Ver código en GitHub</a>
-  </p>
+  <section class="enlaces">
+    <h2>Enlaces</h2>
+    <ul>
+      <li><a href="https://github.com/Ferrer-pixel3/Pagina-Muebles.git" target="_blank">Ver código en GitHub</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Ferrer - Portafolio</p>
+  </footer>
 
   <script>
     function openModal(img) {
@@ -60,7 +70,7 @@
       var modalImg = document.getElementById("imagenModal");
       var descripcion = document.getElementById("descripcionModal");
 
-      modal.style.display = "block";
+      modal.style.display = "flex";
       modalImg.src = img.src;
       descripcion.innerHTML = img.nextElementSibling.innerHTML;
     }
